@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=cyrillic')
+
+$main-color: #1f1f1f
+$second-color: #e9ae30
+
+$white: #f9f9f9
+$action-color: #ff6a31
+$grey: #e7e7e7
+
+*
+  font-family: 'Roboto', sans-serif
+  letter-spacing: .06em
+  color: $main-color
+
+ul
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+a
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none
+
+.menu
+  height: 50px
+  position: fixed
+  background: $white
+  transition: all 0.5s
+  width: 100%
+  z-index: 999
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+  .menu-nav
+    display: flex
+    justify-content: center
+    .menu-nav-wrapper
+      display: flex
+      .menu-nav-el
+        list-style-type: none
+        font-family: 'Oswald', sans-serif
+        margin-right: 30px
+        text-transform: uppercase
+        color: $main-color
+        font-size: 14px
+        font-weight: 500
+        height: 50px
+        a
+          display: flex
+          align-items: center
+          box-sizing: content-box
+          height: 47px
+          &:hover
+            border-bottom: solid 3px $main-color
+
+.burger
+  position: fixed
+  display: none
+  top: 20px
+  right: 40px
+  width: 60px
+  height: 60px
+  justify-content: center
+  align-items: center
+  font-size: 26px
+  cursor: pointer
+  background: $white
+  padding: 10px
+  border-radius: 50%
+  z-index: 999
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+
+.burger-menu
+  position: fixed
+  display: none
+  top: 100px
+  right: 10px
+  background: $white
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+  padding: 10px
+  z-index: 999
+  .burger-nav-wrapper
+    .burger-nav-el
+      text-transform: uppercase
+      color: $main-color
+      font-size: 14px
+      font-weight: 500
+      padding: 5px
+
+
+.hidden-menu
+  top: -70px
+
+.active-menu
+  top: 0
+
+.title
+  background: $second-color
+  font-family: 'Oswald', sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  padding: 10px 24px
+  color: $white
+  letter-spacing: .08em
+  font-size: 34px
+  line-height: 60px
+.subtitle
+  background: $main-color
+  font-family: 'Oswald', sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  padding: 5px 16px
+  color: $white
+  letter-spacing: .08em
+  font-size: 22px
+.subtitle-offset
+  margin-left: 200px
+.title-wrapper
+  margin: 0 0 60px
+
+
+.subtitle-wrapper
+  display: flex
+  justify-content: center
+  margin: -20px
+
+.text-title
+  text-transform: uppercase
+  font-size: 22px
+  font-weight: 600
+  margin: 40px 0 25px
+
+.recommend
+  font-size: 18px
+  margin: 20px 0
+  span
+    padding: 5px 12px
+    color: $white
+    text-transform: uppercase
+    font-weight: 700
+    background: $second-color
+
+
+.main
+  background-image: url("../img/main-bg.png")
+  height: 930px
+  background-size: cover
+  background-position: top
+  background-repeat: no-repeat
+
+  .main-nav
+    height: 80px
+    display: flex
+    justify-content: center
+    .main-nav-wrapper
+      display: flex
+      .main-nav-el
+        list-style-type: none
+        font-family: 'Oswald', sans-serif
+        margin-right: 30px
+        text-transform: uppercase
+        height: 80px
+        font-size: 14px
+        font-weight: 500
+        a
+          display: flex
+          align-items: center
+          box-sizing: content-box
+          height: 77px
+          &:hover
+            border-bottom: solid 3px $main-color
+
+  .main-text-group
+    margin: 170px 200px
+    .main-title
+      font-size: 54px
+      padding: 10px 20px
+      font-weight: 700
+      text-transform: uppercase
+      font-family: 'Oswald', sans-serif
+      background: $main-color
+      color: $white
+    .main-subtitle
+      margin-left: 300px
+      background: $second-color
+      font-size: 40px
+      font-family: 'Oswald', sans-serif
+      color: $white
+      padding: 8px 16px
+      text-transform: uppercase
+      font-weight: 700
+
+  .btn-action
+    width: 300px
+    display: flex
+    justify-content: center
+    border-radius: 20px
+    background: $action-color
+    margin: 0 auto
+    a
+      font-size: 22px
+      letter-spacing: .1em
+      color: $white
+      text-transform: uppercase
+      font-family: 'Oswald', sans-serif
+      font-weight: 700
+      padding: 8px
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+      border-radius: 20px
+      display: block
+      text-align: center
+      width: 100%
+      &:hover
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+
+.about
+  margin: 80px 0
+  .about-content-offside
+    margin-left: 100px
+
+  .about-content
+    padding: 50px
+    background: $grey
+
+  .about-card
+    height: 250px
+    margin: 10px 12px 50px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+    color: $second-color
+    background: $main-color
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    .card-icon
+      color: $second-color
+      font-size: 100px
+    .card-text
+      text-transform: uppercase
+      font-size: 14px
+      text-align: center
+      font-weight: 600
+
+.advantages
+  background-image: url("../img/bg-adv.png")
+  background-size: cover
+  background-position: top
+  background-repeat: no-repeat
+  padding: 200px 0
+
+.advantage-card
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+  background: $main-color
+  color: $second-color
+  height: 100%
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding: 30px 15px
+  .adv-card-icon
+    color: $second-color
+    font-size: 100px
+    margin-bottom: 30px
+  .advantage-card-title
+    text-transform: uppercase
+    font-size: 18px
+    text-align: center
+    font-weight: 600
+    margin-bottom: 20px
+  .advantage-card-text
+    color: $white
+    font-size: 13px
+    text-align: center
+
+.field-wrapper
+  display: flex
+  margin: 12px 0
+  .label-wrapper
+    width: 170px
+    text-transform: uppercase
+    font-size: 15px
+    font-weight: 500
+    padding: 5px
+  .after-desc
+    font-size: 15px
+    text-transform: uppercase
+    font-weight: 500
+    padding: 5px
+  .input-wrapper
+    .number
+      width: 100px
+    .calendar
+      width: 120px
+    .input-text
+      width: 300px
+
+.input
+  font-size: 13px
+  font-weight: 500
+  padding: 5px
+  text-transform: uppercase
+  font-family: 'Roboto', sans-serif
+  border: none
+
+.required
+  color: red
+
+.phone
+  width: 300px
+  &:before
+    content: "+7"
+  &-field
+    width: 200px
+
+.floor
+  width: 40px
+
+.radio-group-wrapper
+  display: flex
+  margin: 12px 0
+  .radio-group-label
+    width: 250px
+    text-transform: uppercase
+    font-size: 15px
+    font-weight: 500
+    padding: 5px
+  .radio-input-wrapper
+    .radio
+      padding: 5px
+      margin-right: 10px
+    .radio-label
+      margin: 0
+      font-size: 15px
+      font-weight: 500
+      padding: 5px
+
+.calculator
+  padding: 100px 0
+  transition: all 1s
+  .calc-content
+    background: $grey
+    padding: 50px
+
+.left
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+
+.order-btn
+  border: none
+  cursor: pointer
+  width: 350px
+  height: 60px
+  background: $second-color
+  text-transform: uppercase
+  font-size: 30px
+  font-family: 'Oswald', sans-serif
+  font-weight: 700
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $white
+
+.payment
+  min-height: 550px
+  background: #ffe562
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  transition: all 1s
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px
+  .table-wrapper
+    .payment-title
+      font-size: 25px
+      text-align: center
+      font-weight: 700
+      padding-bottom: 20px
+      margin: 0 20px
+      border-bottom: 2px solid $main-color
+    .payment-table
+      width: 90%
+      margin: 20px auto
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: 600
+      .table-price
+        text-align: right
+        width: 20%
+      tr
+        td
+          padding: 5px 0
+  .price
+    width: 90%
+    height: 50px
+    background: $main-color
+    margin: 0 auto
+    color: $white
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 20px
+    font-weight: 700
+
+.car-card
+  height: 300px
+  cursor: pointer
+  background: $grey
+  margin-top: 30px
+  padding: 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  .car-img
+    width: 200px
+    display: block
+    margin: 0 auto
+  .car-title
+    text-align: center
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 600
+
+.border-active
+  border: 5px solid $second-color
+
+.contacts
+  background-image: url("../img/bg-contacts.png")
+  background-size: cover
+  background-position: top
+  background-repeat: no-repeat
+  padding: 200px 0
+
+.footer
+  background: $main-color
+
+  .footer-text
+    color: $white
+    text-align: center
+    margin: 0
+    padding: 20px
+    text-transform: uppercase
+    font-size: 13px
+    a:hover
+      color: $second-color
+
+@media (max-width: 1199.98px)
+  .main
+    .main-text-group
+      margin: 170px 150px
+      .main-title
+        font-size: 44px
+      .main-subtitle
+        font-size: 30px
+  .about
+    .about-content
+      .about-card
+        margin: 10px 0 50px
+        .card-icon
+          font-size: 70px
+  .advantages
+    .advantage-card
+      .adv-card-icon
+        font-size: 70px
+      .advantage-card-title
+        font-size: 16px
+
+  .calculator
+    .car-card
+      .car-img
+        width: 150px
+
+@media (max-width: 991.98px)
+  .main
+    .main-text-group
+      margin: 170px auto
+      text-align: center
+
+  .about
+    .about-content
+      .about-card
+        height: 180px
+
+  .calculator
+    .car-card
+      .car-img
+        width: 200px
+  .payment
+    margin: 30px 0
+
+  .order-btn
+    margin: 70px auto
+
+  .advantages
+    .advantage-card
+      margin-bottom: 50px
+      height: 90%
+
+  .calculator
+    .field-wrapper
+      .input-wrapper
+        .number
+          width: 80px
+
+@media (max-width: 767.98px)
+  .menu
+    display: none
+  .burger
+    display: flex
+  .main
+    .main-nav
+      .main-nav-wrapper
+        .main-nav-el
+          display: none
+    .main-text-group
+      margin: 120px auto
+      .main-title
+        font-size: 40px
+      .main-subtitle
+        font-size: 25px
+        margin-left: 200px
+
+  .about
+    .about-content-offside
+      margin-left: 0
+    .subtitle-wrapper
+      margin: 0
+  .subtitle-offset
+    margin-left: 30px
+
+  .calculator
+    .calc-content
+      padding: 5px
+      .field-wrapper
+        .label-wrapper
+          font-size: 14px
+        .input-wrapper
+          .after-desc
+            font-size: 10px
+      .radio-group-wrapper
+        .radio-group-label
+          font-size: 14px
+          width: 170px
+  .car-card
+    height: auto
+
+  .contacts
+    .advantage-card
+      margin-bottom: 50px
+      height: 90%
+
+@media (max-width: 575.98px)
+  .subtitle-offset
+    margin-left: 0
+  .title
+    font-size: 20px
+    width: 100%
+    display: block
+    line-height: 30px
+    padding: 5px 8px
+    text-align: center
+  .subtitle
+    font-size: 16px
+    width: 100%
+    display: block
+    line-height: 20px
+    margin-top: -20px
+    padding: 5px 8px
+    text-align: center
+  .main
+    height: 700px
+    .btn-action
+      width: 250px
+    .main-text-group
+      .main-title
+        font-size: 32px
+        padding: 6px 12px
+      .main-subtitle
+        margin-left: 0
+        font-size: 22px
+        padding: 4px 10px
+  .about
+    .about-content
+      padding: 30px 10px
+
+  #map
+    height: 600px
+
+  .calculator
+    .calc-content
+      .recommend
+        span
+          display: block
+      .order-btn
+        font-size: 20px
+        height: 50px
+        width: 95%
+      .payment
+        padding: 20px 5px
+        .payment-table
+          font-size: 13px
+        .price
+          font-size: 22px
+      .radio-group-wrapper
+        flex-direction: column
+        .radio-input-wrapper
+          .radio
+            margin-right: 0
+      .label-wrapper
+        font-size: 12px
+      .field-wrapper
+        .input-wrapper
+          width: 100%
+          .input-text
+            width: 100%
+      .phone
+        .phone-field
+          width: 100%

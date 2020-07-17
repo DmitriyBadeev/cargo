@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Грузоперевозки по Москве и области</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=97e52355-3802-40b3-a847-84b183ca263a" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+	<div class="menu hidden-menu" id="menu">
+		<nav class="menu-nav">
+			<ul class="menu-nav-wrapper">
+				<li class="menu-nav-el"><a href="#about">о нас</a></li>
+				<li class="menu-nav-el"><a href="#advantages">преимущества</a></li>
+				<li class="menu-nav-el"><a href="#calculator">калькулятор</a></li>
+				<li class="menu-nav-el"><a href="#auto">автопарк</a></li>
+				<li class="menu-nav-el"><a href="#contacts">контакты</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="burger animated bounceInRight">
+		<i class="fas fa-bars"></i>
+	</div>
+	<nav class="burger-menu animated bounceInRight">
+		<ul class="burger-nav-wrapper">
+			<li class="burger-nav-el"><a href="#about" onclick="fadeBurgerMenu()">о нас</a></li>
+			<li class="burger-nav-el"><a href="#advantages" onclick="fadeBurgerMenu()">преимущества</a></li>
+			<li class="burger-nav-el"><a href="#calculator" onclick="fadeBurgerMenu()">калькулятор</a></li>
+			<li class="burger-nav-el"><a href="#auto" onclick="fadeBurgerMenu()">автопарк</a></li>
+			<li class="burger-nav-el"><a href="#contacts" onclick="fadeBurgerMenu()">контакты</a></li>
+		</ul>
+	</nav>
+
+
+	<section class="main">
+		<nav class="main-nav animated bounceInDown">
+			<ul class="main-nav-wrapper">
+				<li class="main-nav-el"><a href="#about">о нас</a></li>
+				<li class="main-nav-el"><a href="#advantages">преимущества</a></li>
+				<li class="main-nav-el"><a href="#calculator">калькулятор</a></li>
+				<li class="main-nav-el"><a href="#auto">автопарк</a></li>
+				<li class="main-nav-el"><a href="#contacts">контакты</a></li>
+			</ul>
+		</nav>
+
+		<div class="main-text-group animated bounceInLeft">
+			<span class="main-title">Грузоперевозки</span><br />
+			<span class="main-subtitle">по москве и области</span>
+		</div>
+		
+		<div class="btn-action animated bounceInUp">
+			<a href="#calculator">расчитать цену</a>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="container">
+			<span class="title">кто мы?</span>
+			<div class="about-content about-content-offside">
+				<div class="container">
+					<p class="text">
+						Наша компания занимается грузоперевозками по Москве и Московской области. В распоряжении собственный
+						автопарк автомобилей. Грузовики абсолютно надежны, так как своевременно проходят технический осмотр. Мы работаем
+						быстро и слаженно. Прежде чем приступить к делу, специалисты прокладывают оптимальный маршрут, что помогает
+						выполнить перевозку в кратчайшие сроки. Кроме того, мы гарантируем сохранность имущества.
+					</p>
+					<h3 class="text-title">наши услуги</h3>
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="about-card wow animated fadeIn">
+								<i class="fas fa-couch card-icon"></i>
+								<h4 class="card-text">офисные, квартирные,
+									дачные переезды</h4>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-card wow animated fadeIn" data-wow-delay="0.3s">
+								<i class="fas fa-truck card-icon"></i>
+								<h4 class="card-text">грузоперевозки по Москве,
+									Московской области </h4>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-card wow animated fadeIn" data-wow-delay="0.6s">
+								<i class="fas fa-truck-loading card-icon"></i>
+								<h4 class="card-text">услуги грузчиков и
+									сборщиков мебели</h4>
+							</div>
+						</div>
+					</div>
+					<p class="text"><strong>Наши услуги доступны 24 часа в сутки без выходных. </strong></p>
+					<p class="text">Диспетчеры в любое время ответят на звонок и помогут решить ваши проблемы. Наличие пропуска в центр Москвы позволяет
+						осуществлять перевозки в любое время суток. Если вы столкнулись с проблемой офисного, квартирного или дачного переезда,
+						наша компания – оптимальный выбор. Вам не придется принимать участие в трудоемком процессе. Штат грузчиков привезет
+						Ваше имущество в целости и сохранности.</p>
+				</div>
+			</div>
+			<div class="subtitle-wrapper about-content-offside"><span class="subtitle">грузоперевозки - больше не проблема</span></div>
+		</div>
+	</section>
+
+	<section class="advantages" id="advantages">
+		<div class="container">
+			<div class="title-wrapper">
+				<span class="title">почему мы?</span> <br />
+				<span class="subtitle subtitle-offset">надежно и недорого</span>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="advantage-card wow animated fadeInLeft">
+						<i class="fas fa-money-bill-alt adv-card-icon"></i>
+						<h4 class="advantage-card-title">никаких переплат</h4>
+						<p class="advantage-card-text">
+							С помощью нашего калькулятора
+							вы можете посчитать стоимость
+							вашей перевозки.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="advantage-card advantage-card wow animated fadeIn">
+						<i class="fas fa-shipping-fast adv-card-icon"></i>
+						<h4 class="advantage-card-title">соблюдение сроков
+							доставки</h4>
+						<p class="advantage-card-text">
+							Никогда не нарушаем сроков
+							доставки груза. Ценим в
+							сотрудниках отвественность
+							и пунктуальность.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="advantage-card advantage-card wow animated fadeIn">
+						<i class="fas fa-coins adv-card-icon"></i>
+						<h4 class="advantage-card-title">низкая цена</h4>
+						<p class="advantage-card-text">
+							Мы не тратим много денег
+							на рекламу и стараемся максимально
+							оптимизировать траты, чтобы всегда
+							держать низкую цену.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="advantage-card advantage-card wow animated fadeInRight">
+						<i class="fas fa-shield-alt adv-card-icon"></i>
+						<h4 class="advantage-card-title">надежность</h4>
+						<p class="advantage-card-text">
+							100%-я материальная
+							ответственность.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="calculator" id="calculator">
+		<div class="container">
+			<div class="title-wrapper">
+				<span class="title">сколько будет стоить?</span> <br />
+				<span class="subtitle subtitle-offset">расчет и оформление заказа</span>
+			</div>
+
+			<div class="calc-content">
+				<div class="container">
+					<form action="script/form.php" method="post">
+						<div class="field-wrapper">
+							<div class="label-wrapper">
+								<label for="width">габариты груза</label>
+							</div>
+							<div class="input-wrapper">
+								<input class="input number" min="0" type="number" id="width" placeholder="ширина" onchange="changeVolume(); changeCar()"/> &#10006;
+								<input class="input number" min="0" type="number" id="length" placeholder="длина" onchange="changeVolume(); changeCar()" /> &#10006;
+								<input class="input number" min="0" type="number" id="height" placeholder="высота" onchange="changeVolume(); changeCar()"/>
+								<span class="after-desc">метров</span>
+							</div>
+						</div>
+
+						<div class="field-wrapper">
+							<div class="label-wrapper">
+								<label for="vol">объем груза<span class="required">*</span></label>
+							</div>
+							<div class="input-wrapper">
+								<input class="input number" min="0" type="number" id="vol" onchange="changeCar()" placeholder="0.00" required/>
+								<span class="after-desc">м&sup3;</span>
+							</div>
+						</div>
+
+						<div class="field-wrapper">
+							<div class="label-wrapper">
+								<label for="weight">масса груза<span class="required">*</span></label>
+							</div>
+							<div class="input-wrapper">
+								<input class="input number" min="0" type="number" id="weight" placeholder="0" onchange="changeCar()" required/>
+								<span class="after-desc">кг</span>
+							</div>
+						</div>
+
+						<div class="field-wrapper">
+							<div class="label-wrapper">
+								<label for="cargo">характер груза</label>
+							</div>
+							<div class="input-wrapper">
+								<input class="input input-text" name="Груз" type="text" id="cargo" placeholder="мебель, стройматериалы и т.п"/>
+							</div>
+						</div>
+
+						<div class="radio-group-wrapper">
+							<div class="radio-group-label">
+								груз сыпучий?
+							</div>
+							<div class="radio-input-wrapper">
+								<input class="radio" type="radio" id="isLoose" name="loose" onchange="changeCar()"/>
+								<label for="isLoose" class="radio-label">Да</label> <br />
+								<input class="radio" type="radio" id="isNotLoose" name="loose" onchange="changeCar()" checked/>
+								<label for="isNotLoose" class="radio-label">Нет</label> <br />
+							</div>
+						</div>
+
+						<div class="field-wrapper">
+							<div class="label-wrapper">
+								<label for="date">когда забирать<span class="required">*</span></label>
+							</div>
+							<div class="input-wrapper">
+								<input class="input calendar" name="Дата" type="text" id="date" placeholder="Дата"/>
+							</div>
+						</div>
+
+                        <h5 class="recommend">Рекомендуемая машина*: <span id="recommend-car">Газель Некст</span></h5>
+                        <p>* - Вы можете выбрать другую машину в разделе автопарк.</p>
+
+						<div id="map" style="width: 100%; height: 600px"></div>
+
+						<div class="row mt-5">
+							<div class="col-lg-7">
+								<div class="left">
+									<div class="radio-group-wrapper">
+										<div class="radio-group-label">
+											количество грузчиков
+										</div>
+										<div class="radio-input-wrapper">
+											<input class="radio" type="radio" id="one-с" onchange="changeLoaders()" name="loaders"/>
+											<label for="one-с" class="radio-label">1</label> <br />
+											<input class="radio" type="radio" id="two-с" onchange="changeLoaders()" name="loaders"/>
+											<label for="two-с" class="radio-label">2</label> <br />
+											<input class="radio" type="radio" id="none-с" onchange="changeLoaders()" name="loaders" checked/>
+											<label for="none-с" class="radio-label">Без грузчиков</label> <br />
+										</div>
+									</div>
+
+									<div class="radio-group-wrapper">
+										<div class="radio-group-label">
+											упаковка
+										</div>
+										<div class="radio-input-wrapper">
+											<input class="radio" type="radio" id="one-p" name="pack" onchange="changePack()"/>
+											<label for="one-p" class="radio-label">Пленкой</label> <br />
+											<input class="radio" type="radio" id="two-p" name="pack" onchange="changePack()"/>
+											<label for="two-p" class="radio-label">Пузырчатой пленкой</label> <br />
+											<input class="radio" type="radio" id="none-p" name="pack" onchange="changePack()" checked/>
+											<label for="none-p" class="radio-label">Без упаковки</label> <br />
+										</div>
+									</div>
+
+									<div class="radio-group-wrapper">
+										<div class="radio-group-label">
+											дополнительные услуги
+										</div>
+										<div class="radio-input-wrapper">
+											<input class="radio" type="checkbox" id="more1" name="more" onchange="changeServices()"/>
+											<label for="more1" class="radio-label">СМС-уведомление</label> <br />
+											<input class="radio" type="checkbox" id="more2" name="more" onchange="changeServices()"/>
+											<label for="more2" class="radio-label">Быстрая доставка*</label> <br />
+
+											<label for="more3" class="radio-label">поднятие груза на
+												<input min="1" max="99"  type="number" id="more3" class="input floor" onchange="changeServices()"> этаж</label> <br />
+											<label for="more4" class="radio-label">спускание груза с
+												<input min="1" max="99" type="number" id="more4" class="input floor" onchange="changeServices()"> этажа</label> <br />
+										</div>
+									</div>
+
+									<div class="field-wrapper">
+										<div class="label-wrapper">
+											<label for="phone">ваш телефон<span class="required">*</span></label>
+										</div>
+										<div class="input-wrapper phone">
+											<input class="input phone-field" name="Телефон" type="text" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" id="phone" maxlength="10" placeholder="номер" required/>
+										</div>
+									</div>
+
+									<div class="field-wrapper">
+										<div class="label-wrapper">
+											<label for="email">ваша почта<span class="required">*</span></label>
+										</div>
+										<div class="input-wrapper">
+											<input class="input input-text" name="Email" type="email" id="email" placeholder="email" required/>
+										</div>
+									</div>
+
+									<div class="field-wrapper">
+										<div class="label-wrapper">
+											<label for="name">ваше имя<span class="required">*</span></label>
+										</div>
+										<div class="input-wrapper">
+											<input class="input input-text" name="Имя" type="text" id="name" placeholder="представьтесь" required/>
+										</div>
+									</div>
+									<p>* - привезем товар в интервале менее 4-х часов</p>
+									<p><span class="required">*</span> - обязательное поле</p>
+								</div>
+							</div>
+
+							<div class="col-lg-5">
+								<div class="payment">
+									<div class="table-wrapper">
+										<h3 class="payment-title">Расчет</h3>
+										<table class="payment-table" id="payment-table">
+
+										</table>
+									</div>
+									<div class="price" id="result-price">
+										итого: 0 руб
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="hidden">
+							<input type="text" id="hidden-allPrice" name="Итого" value="0 руб" hidden>
+							<input type="text" id="hidden-price-addressFrom" name="Пункт отправки" hidden required>
+							<input type="text" id="hidden-price-addressTo" name="Пункт назначения" hidden required>
+						</div>
+                        <p id="error" class="required"></p>
+                        <button class="order-btn">
+                            оформить заказ
+                        </button>
+					</form>
+				</div>
+			</div>
+
+			<div class="row" id="auto">
+				<div class="col-lg-3 col-md-6">
+					<div class="car-card" id="car_1" onclick="select_car(1)">
+						<img src="img/kamaz_samosval.png" alt="камаз самосвал" class="car-img">
+						<p class="car-title">самосвал “камаз”</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="car-card" id="car_2" onclick="select_car(2)">
+						<img src="img/Largus.png" alt="лада ларгус" class="car-img">
+						<p class="car-title">лада ларгус</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="car-card border-active" id="car_3" onclick="select_car(3)">
+						<img src="img/next.png" alt="газель некст" class="car-img">
+						<p class="car-title">газель некст</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="car-card" id="car_4" onclick="select_car(4)">
+						<img src="img/71162.png" alt="уаз" class="car-img">
+						<p class="car-title">уаз</p>
+					</div>
+				</div>
+			</div>
+			<div class="subtitle-wrapper">
+				<span class="subtitle mt-5">наш автопарк</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="contacts" id="contacts">
+		<div class="container">
+			<div class="title-wrapper">
+				<span class="title">как с нами связаться?</span> <br />
+				<span class="subtitle subtitle-offset">наши контакты</span>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="advantage-card wow animated fadeInLeft">
+						<i class="fas fa-phone-square adv-card-icon"></i>
+						<h4 class="advantage-card-title">телефон</h4>
+						<p class="advantage-card-text">
+							+7 (985) 337-25-22
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 offset-md-3">
+					<div class="advantage-card wow animated fadeInRight">
+						<i class="fas fa-envelope-open adv-card-icon"></i>
+						<h4 class="advantage-card-title">email</h4>
+						<p class="advantage-card-text">
+							gruzperevozki77@gmail.com
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<p class="footer-text">ИП Сычев Дмитрий Алексеевич <br />
+			© все права защищены <br />
+			<a href="https://vk.com/d_503_45">BY DMITRIY BADEEV</a></p>
+	</footer>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "landing page for IP",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "config": {
+    "src": {
+      "sass": "src/sass/main.sass",
+      "html": "src/index.html",
+      "script": "src/script/**/*.*",
+      "img": {
+        "compress": [
+          "src/img/**/*.*",
+          "!src/img/nocompress/**/*.*"
+        ],
+        "nocompress": "src/img/nocompress/**/*.*"
+      }
+    },
+    "dist": {
+      "css": "dist/css",
+      "html": "dist",
+      "script": "dist/script",
+      "img": "dist/img"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/010100-45/ProjectUrFU.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/010100-45/ProjectUrFU/issues"
+  },
+  "homepage": "https://github.com/010100-45/ProjectUrFU#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.9.4",
+    "require-dir": "^1.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "cssnano": "^4.1.7",
+    "del": "^3.0.0"
+  }
+}
