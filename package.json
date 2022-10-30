@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/010100-45/ProjectUrFU#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cssnano": "^2.1.3",
